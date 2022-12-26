@@ -1,0 +1,97 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+}
+
+nav {
+    display: inline-block;
+    position: relative;
+    background-color: teal;
+    color: azure;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+
+nav ul:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+nav a {
+    text-decoration: none;
+    display: block;
+    transition: .3s linear;
+}
+
+.top-menu > li {
+    float: left;
+    position: relative;
+    border-left: 1px solid black;
+}
+
+.top-menu > li:first-child {
+    border-left: 0;
+}
+
+.top-menu > li > a {
+    padding: 20px 30px;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #FEFDFD;
+    letter-spacing: 2px;
+}
+
+.top-menu > li > a.active,
+.submenu a:hover {
+}
+
+.submenu {
+    position: absolute;
+    min-width: 160px;
+    background: teal;
+    border-top: 1px solid #CBCBCC;
+    border-left: 1px solid #CBCBCC;
+    border-right: 1px solid #CBCBCC;
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s linear;
+
+}
+
+.submenu li {
+    position: relative;
+}
+
+.submenu li a {
+    color: white;
+    padding: 10px 20px;
+    font-size: 13px;
+    border-bottom: 1px solid #CBCBCC;
+}
+
+.submenu .submenu {
+    position: absolute;
+    left: 100%;
+    top: -1px;
+    transition: .3s linear;
+}
+
+nav li:hover > .submenu {
+    transform: rotate(0deg);
+    visibility: visible;
+    opacity: 1;
+}
+
+.active:hover {
+    background-color: rgb(0, 52, 52);
+}
+
+a:hover {
+    background-color: rgb(0, 52, 52);
+}
